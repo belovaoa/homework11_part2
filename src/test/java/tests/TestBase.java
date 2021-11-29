@@ -20,11 +20,11 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-        String selenoidUrl = System.getProperty("url");
+        String selenoidUrl = System.getProperty("url", "selenoid.autotests.cloud/wd/hub/");
         String login = credentials.login();
         String password = credentials.password();
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
         Configuration.remote = format("https://%s:%s@" + selenoidUrl, login, password);
 
