@@ -24,7 +24,7 @@ public class TestBase {
         String login = credentials.login();
         String password = credentials.password();
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
         Configuration.remote = format("https://%s:%s@" + selenoidUrl, login, password);
 
