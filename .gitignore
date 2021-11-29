@@ -45,4 +45,3 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
-config/

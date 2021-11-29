@@ -14,8 +14,10 @@ public class NewTest extends TestBase {
     @Test
     void  upravlyaemVmesteTest() {
 
-        step("Проверяем наличие кнопки войти", () -> {
+        step("Открываем страницу https://vmeste.permkrai.ru/", () -> {
             open("https://vmeste.permkrai.ru/");
+        });
+        step("Проверяем наличие кнопки войти", () -> {
             $(".main-header__user-text").shouldHave(text("Войти"));
         });
     }
